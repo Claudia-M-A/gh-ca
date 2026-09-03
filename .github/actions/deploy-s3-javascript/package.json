@@ -1,18 +1,22 @@
 {
   "name": "deploy-s3-javascript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom GitHub Action to deploy to AWS S3",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ncc build main.js -o dist",
+    "test": "echo \"No tests specified\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@actions/core": "^3.0.1",
-    "@actions/exec": "^3.0.0",
-    "@actions/github": "^9.1.1"
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
   }
 }
